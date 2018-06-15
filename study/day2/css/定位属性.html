@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        *{
+            margin: 0px;
+        }
+
+
+
+        .div1{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+
+        }
+
+        .div2{
+            width: 200px;
+            height: 100px;
+            background-color: aquamarine;
+            /*position: relative;*/
+            position: absolute;
+            left: 100px;
+            top: 100px;
+
+        }
+
+        .div3{
+            width: 200px;
+            height: 200px;
+            background-color: rebeccapurple;
+
+        }
+
+        .div4{
+            width: 200px;
+            height: 200px;
+            background-color: darkgoldenrod;
+        }
+
+
+        .father {
+            position: relative;
+        }
+
+
+        .returnTop{
+            width: 100px;
+            height:50px;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            background-color: coral;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<p id="111">首页</p>
+
+<div style="width: 500px;height: 500px;background-color:red "></div>
+
+
+
+<div class="father">
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+</div>
+
+
+<div style="width: 1000px;height: 1000px; background-color: rebeccapurple" ></div>
+
+<a class="returnTop" href="#111">返回顶部</a>
+
+</body>
+</html>
