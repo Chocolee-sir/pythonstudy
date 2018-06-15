@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+    a:link{
+        color: red;
+    }
+    a:visited {
+        color: blue;
+    }
+    a:hover {
+        color: green;
+    }
+    a:active {
+        color: yellow;
+    }
+
+
+
+    .box{
+        width: 100px;
+    }
+
+
+    .top{
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+    }
+
+
+    .bottom{
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+    }
+
+
+    .box:hover .top{
+        background-color: red;
+    }
+
+    .add:after{
+        content: "  welcome!!!!";
+    }
+
+    .add:before{
+        content: "haha   ";
+        color: chocolate;
+    }
+
+
+        /*重点伪类为hover*/
+
+</style>
+
+</head>
+<body>
+
+    <a href="css_引入方式.html">hello-world</a>
+
+    <div class="box">
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+
+
+    <div class="add">hello lee</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+
+        div{
+            color: yellow;
+        }
+
+
+        .div1{
+            color: red;
+        }
+
+
+
+        #id1{
+            color: darkmagenta;
+        }
+
+
+        .div3{
+            color: aqua;
+        }
+
+        .div1 .div3{
+            color: antiquewhite;
+        }
+
+   /*可以加!important强制优先级*/
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div class="div1">
+        <div class="div2">
+            <div class="div3">嵌套优先级</div>
+        </div>
+    </div>
+
+
+    <div class="div1" id="id1" style="color: green">优先级</div>
+
+</body>
+</html>

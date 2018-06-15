@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test table</title>
+</head>
+<body>
+
+<h1>注册页面</h1>
+
+
+<form action="http://127.0.0.1:8080" method="post" enctype="multipart/form-data">
+    <p>用户名:<input type="text" name="username" placeholder="用户名" disabled></p>
+
+    <p>密码:<input type="password" name="password" placeholder="密码"></p>
+
+    <p>爱好: 音乐<input type="checkbox" name="hobby" value="music"  checked>电影<input type="checkbox" name="hobby" value="movie"></p>
+    <p>性别: 男<input type="radio" name="sex" value="men">女<input type="radio" name="sex" value="women"></p>
+
+    <p><input type="file"  name="put_file" value="上传文件"></p>
+    <p><input type="reset"  value="重置"></p>
+    <p><input type="button" name="button" value="button"></p>
+    <p><input type="submit" name="submit" value="提交注册"></p>
+
+
+    省份<select name="province" multiple size="4">
+            <optgroup label="中国">
+                <option value="beijing" selected>北京市</option>
+                <option value="shanghai">上海市</option>
+                <option value="jiangsu">江苏省</option>
+                <option value="zhejiang">浙江省</option>
+                <option value="zhejiang">广东省</option>
+            </optgroup>
+        </select>
+
+
+    <p>简介<textarea name="desc" cols="20" rows="10"></textarea></p>
+
+    <fieldset>
+    <label for="www">姓名</label>
+    <input id="www" type="text">
+    </fieldset>
+
+
+    <table border="1px" cellpadding="10px" cellspacing="5px">
+        <thead>
+            <tr>
+                <th>111</th>
+                <th>222</th>
+                <th>222</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="2">11</td>
+                <td>22</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td colspan="2">22</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+
+</form>
+
+</body>
+</html>
