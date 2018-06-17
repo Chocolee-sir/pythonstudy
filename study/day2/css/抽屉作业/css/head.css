@@ -1,0 +1,107 @@
+       /*---------------head部分开始---------------*/
+        .head-box{
+            background-color: #2459a2;
+            height: 44px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left:0;
+        }
+
+        .head-content{
+            width: 1016px;
+            line-height: 44px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+
+        .head-content .logo{
+            display: inline-block;
+            background: url('../images/logo.png');
+            width: 121px;
+            height: 23px;
+            float: left;
+            margin-top: 11px;;
+        }
+
+
+        .head-content .action-menu{
+            float: left;
+            margin-left: 40px;
+        }
+
+
+        .head-content .action-menu a.tb{
+            display: inline-block;
+            margin-left: -3px;
+            padding: 0 16px 0 13px;
+            color: darkgray;
+        }
+
+
+        .head-content .action-menu a.tb:hover{
+            color: white;
+            background-color: #396db3;
+        }
+
+
+        .head-content .action-menu a.active, .head-content .action-menu a.active:hover{
+            color: white;
+            background-color: #204982;
+        }
+
+
+        .key-search{
+            float: right;
+            margin-top: 7px;
+        }
+
+
+        .key-search .search-txt{
+            float: left;
+            width: 91px;
+            height: 25px;
+            padding: 2px 2px 2px 5px;
+        }
+
+
+        .key-search a{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #f4f4f4;
+        }
+
+
+        .key-search a span.ico{
+            display: inline-block;
+            width: 11px;
+            height:13px;
+            background: url('../images/icon.png') no-repeat 0 -196px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+
+
+        .action-nav{
+            position: absolute;
+            right: 150px;
+        }
+
+
+        .action-nav a{
+            display: inline-block;
+            line-height: 44px;
+            color: white;
+            margin: 0 5px;
+            padding: 0 20px;
+        }
+
+
+        .action-nav a:hover{
+            background-color: #396bb3;
+        }
+
+
+         /*---------------head部分结束---------------*/
