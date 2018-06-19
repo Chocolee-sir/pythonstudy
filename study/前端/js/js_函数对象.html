@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+<script>
+
+    //函数的创建方式一
+
+
+    function f(x,y){
+        alert(123);
+        return x+y; //没有return，则返回值为null
+    }
+    console.log(f(1,2));
+
+    console.log(f.length)  //参数个数
+
+
+    //函数的创建方式二
+
+
+
+    //函数的调用
+
+    function add(x,y,z){
+        return x+y+z;
+    }
+    console.log(add(12,3,4,6,7,5));
+    console.log(add(12,3));
+    console.log(add('leoo','test'));
+
+
+
+    //arguments
+    function ADD(){
+        var sum=0;
+        for (var i=0;i<arguments.length;i++){
+            sum+=arguments[i];
+        }
+        return sum;
+    }
+    console.log(ADD(1,2,3,4,5,6,7,2));
+
+
+
+
+    //匿名函数
+    var func = function(arg){
+        return "tony";
+    }
+
+    console.log(func("hello"))
+
+
+
+    (function(arg){
+        console.log(arg);
+    })('123')
+
+
+</script>
+</body>
+</html>

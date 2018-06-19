@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+<script>
+    //==============array================
+
+    //创建方式
+    arr1=[1,'hello',[11,2],{"name":"liyiliang"}];
+    arr2=new Array(3);
+    arr3=new Array(1,'world',true,[1,2,3]);
+
+    console.log(typeof arr1);
+    console.log(typeof arr2);
+    console.log(typeof arr3);
+
+    //注意： var arr4=new Array(10)  10是size
+
+
+    //array对象方法
+    var arr5=[1,2,3,4];
+    console.log(arr5.join("**"));
+
+
+    //Tostaring 方法
+    var arr6=arr5.toString();
+    console.log(typeof arr6);
+
+
+    //数组排序
+    var arr7=[10,45,100,100,88];
+    console.log(arr7.reverse());
+    console.log(arr7.sort())
+
+    function f1(a,b){
+    if (a>b){
+        return 1;//-1
+    }
+    else if(a<b){
+        return -1;//1
+    }
+    else {
+        return 0
+    }
+
+    }
+
+    function f2(a,b){
+        return a-b;
+    }
+
+    var arr8=arr7.sort(f1);
+    var arr9=arr7.sort(f2);
+    console.log(arr8);
+    console.log(arr9);
+
+
+
+    //数组的进出栈操作  push pop 插入到后面   shift unsfit插入到前面   栈操作 ：子弹夹，先进后出，后进先出
+    var arr10=[1,2,3];
+    arr10.push([9,10]);
+    arr10.push("hello",12);
+    console.log(arr10);
+    console.log(arr10.length);
+
+    console.log(arr10.pop());
+    console.log(arr10.length);
+
+
+    var arr11=[1,2,3];
+    arr11.unshift(4,5);
+    alert(arr11);
+    //结果为"4,5,1,2,3"
+    arr11. unshift([6,7]);
+    alert(arr11);
+    //结果为"6,7,4,5,1,2,3"
+    arr11.shift();
+    alert(arr11);
+    //结果为"4,5,1,2,3"
+
+
+</script>
+</body>
+</html>

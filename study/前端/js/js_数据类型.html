@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+<script>
+    var str="\u4f60\u597d\n欢迎来到\"JavaScript世界\"";
+    alert(str);
+
+
+
+
+    if(0){
+        console.log(true+1);
+    }else {
+        console.log(false+1);
+    }
+
+
+
+//    Undefined
+    var x;
+        console.log(x);
+
+    function f(){
+        document.write('hello world');
+    }
+    console.log(f());
+
+
+// null 针对对象用的
+//    var person=new Person();
+//    var person=null;
+
+
+
+//    数据转换
+//    console.log("hello"+2);
+//    console.log("hello"+true);
+//    console.log(2+true);
+
+
+//    强制类型转换函数
+//    NAN,not a number,属于number的一种
+    console.log(parseInt(6.12),parseInt('123'),parseInt('hello'),parseInt('123abc'),parseInt('abc123'));
+//    函数parseFloat： 强制转换成浮点数  parseFloat("6.12")=6.12
+//函数eval：       将字符串强制转换为表达式并返回结果 eval("1+1")=2 ; eval("1<2")=true
+    console.log(eval(1>2));
+
+
+//    类型查询函数(typeof) 区分基本数据类型
+    //例如typeof("test"+3)      "string"
+//例如typeof(null)          "object "
+//例如typeof(true+1)        "number"
+//例如typeof(true-false)    "number"
+
+
+</script>
+</body>
+</html>
