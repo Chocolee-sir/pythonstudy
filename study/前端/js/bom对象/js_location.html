@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button onclick="f()">刷新</button>
+
+<script>
+//    location.assign("http://www.baidu.com");
+
+    function f(){
+        location.reload();
+    }
+
+    location.replace("http://www.baidu.com"); //与assign的区别，是无法后退，相当于一个新页面
+
+</script>
+
+</body>
+</html>
