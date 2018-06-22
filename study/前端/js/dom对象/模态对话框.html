@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .content{
+            height: 1800px;
+            background-color: aquamarine;
+        }
+
+
+        .shade{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: red;
+            opacity: 0.3;
+        }
+
+
+        .model{
+            width: 200px;
+            height: 200px;
+            background-color: #99aecd;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top: -100px;
+            margin-left: -100px;
+        }
+
+        .hide{
+            display: none;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+
+
+<div class="content">
+    <button onclick="show()">show</button>
+    1111111111111111111212121
+</div>
+
+
+<div class="shade hide"></div>
+
+
+<div class="model hide">
+    <button onclick="cancel()">取消</button>
+</div>
+
+
+
+
+<script>
+
+    function show(){
+        var ele_shade=document.getElementsByClassName("shade")[0];
+        var ele_model=document.getElementsByClassName("model")[0];
+
+//        console.log(ele_model);
+
+        ele_model.classList.remove("hide");
+        ele_shade.classList.remove("hide");
+    }
+
+    function cancel() {
+        var ele_shade = document.getElementsByClassName("shade")[0];
+        var ele_model = document.getElementsByClassName("model")[0];
+
+//        console.log(ele_model);
+
+        ele_model.classList.add("hide");
+        ele_shade.classList.add("hide");
+    }
+
+
+</script>
+
+</body>
+</html>

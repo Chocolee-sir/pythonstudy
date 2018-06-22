@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form action="" id="form1">
+    <input type="text" name="username">
+    <input type="submit" value="提交">
+</form>
+
+
+
+<script>
+    var ele=document.getElementById('form1');
+    ele.onsubmit=function(e){
+        alert('hello');
+//        return false;  //检测有问题，不向后端请求
+        e.preventDefault();
+    }
+</script>
+
+</body>
+</html>
