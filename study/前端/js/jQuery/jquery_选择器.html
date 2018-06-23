@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="div1">hello div</div>
+
+<a href="">click</a>
+
+
+
+<p id='p1' alex="sb">hello p1</p>
+<p id='p2' alex="nb">hello p2</p>
+<div class="outer">
+    outer
+    <p>outer p</p>
+    <div class="inner">
+        inner
+        <p>inner p</p>
+    </div>
+</div>
+<div class="outer">22222</div>
+<p>hello xialv</p>
+
+
+<ul>
+    <li>11111</li>
+    <li>22222</li>
+    <li>33333</li>
+    <li>44444</li>
+</ul>
+
+
+
+<input type="text">
+<input type="checkbox">
+<input type="submit">
+
+
+
+<script src="jquery-3.3.1.js"></script>
+
+<script>
+
+    //基本选择器
+//    $('*').css('color','red')
+//    $('#div1').css('color','red');
+//    $('.outer').css('color','green');
+//    $('.inner,p,div').css('color','green');
+
+
+    //层级选择器
+//    $('.outer p').css('color','red');
+//    $('.outer>p').css('color','red');
+//    $('.outer+p').css('color','red');
+//    $('.outer~p').css('color','red');
+
+
+    //基本筛选器
+//    $('li:first').css('color','red');
+//    $('li:last').css('color','red');
+//    $('li:eq(2)').css('color','red');
+//    $('li:even').css('color','red');
+//    $('li:gt(1)').css('color','red');
+
+
+    //属性选择器
+//    $("[alex='sb']").css('color','red');
+
+
+    //表单选择器
+    $("input:text").css('color','red');
+
+</script>
+
+
+</body>
+</html>

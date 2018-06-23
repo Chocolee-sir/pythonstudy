@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<select id="provinces">
+    <option value="">请选择身份</option>
+    <!--<option value="">北京</option>-->
+    <!--<option value="">上海</option>-->
+    <!--<option value="">浙江</option>-->
+</select>
+
+
+<select id="citys">
+    <option value="">请选择城市</option>
+</select>
+
+
+
+<script>
+
+    data=
+    {
+        "北京市":["北京市"],
+        "江苏省":["苏州市","无锡市","南京市"],
+        "陕西省":["西安市","汉中市"]
+    };
+
+//    console.log(data);
+//
+//    for(var i in data){
+//        console.log(i);
+//    }
+//
+
+    var pro_ele=document.getElementById("provinces");
+    var cit_ele=document.getElementById("citys");
+
+    for (var i in data){
+        var ele=document.createElement("option");
+        ele.innerHTML=i;
+        pro_ele.appendChild(ele);
+    }
+
+    pro_ele.onchange=function(){
+//        console.log(this.selectedIndex);
+        console.log(this.options[this.selectedIndex]);
+
+        var cis=data[this.options[this.selectedIndex].innerHTML];
+
+
+        cit_ele.options.length=1;
+        for (var i=0;i<cis.length;i++){
+            var ele=document.createElement("option");
+            ele.innerHTML= cis[i];
+            cit_ele.appendChild(ele);
+        }
+
+
+    }
+
+
+</script>
+
+
+
+</body>
+</html>
