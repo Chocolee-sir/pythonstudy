@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        .div1,.div2{
+            width: 200px;
+            height: 800px;
+        }
+
+
+        .div1{
+            background-color: green;
+        }
+
+        .div2{
+            background-color: red;
+        }
+
+        .returntop{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 90px;
+            height: 50px;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .hide{
+            display: none;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+
+
+<div class="div1"></div>
+<div class="div2"></div>
+
+<div class="returntop hide" onclick="rtp()">返回顶部</div>
+
+
+
+
+<script src="jquery-3.3.1.js"></script>
+
+
+<script>
+    window.onscroll=function(){
+
+        if($(window).scrollTop()>300){
+            $('.returntop').removeClass('hide');
+        }else {
+            $('.returntop').addClass('hide');
+        }
+
+
+//        console.log($(window).scrollTop());
+
+    };
+
+
+    function rtp(){
+        $(window).scrollTop(0);
+    }
+
+
+
+</script>
+
+
+
+</body>
+</html>

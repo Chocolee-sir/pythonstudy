@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="c1">
+    <p>ppppp</p>
+    <h1>22222222</h1>
+</div>
+
+<button>add</button>
+
+
+
+
+
+
+
+<script src="jquery-3.3.1.js"></script>
+
+<script>
+    $('button').click(function(){
+//        $('div,.c1').append('<h1>1111111111111</h1>');
+
+        var $ele=$('<h1>');
+        $ele.html('hello liyiliang').css('color','red');
+//        $('.c1').append($ele);
+        //从尾部追加（内部操作）
+//        $ele.html('hello liyiliang').css('color','red').appendTo(".c1");
+
+        //从头部追加（内部操作）
+//        $ele.html('hello liyiliang').css('color','red').prependTo('.c1');
+
+        //外部操作
+//        $('.c1').after($ele);
+//        $ele.insertAfter('.c1');
+
+
+        //替换
+//        $('.c1').replaceWith($ele);
+
+        //删除与清空
+//        $('.c1').empty();
+//        $('.c1').remove();
+
+        //克隆
+        $('div.c1 p:eq(0)').clone().insertAfter('.c1');
+
+    })
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
