@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<ul>
+    <li>1111</li>
+    <li>2222</li>
+    <li>3333</li>
+    <li>4444</li>
+</ul>
+
+
+<button>add</button>
+
+<script src="jquery-3.3.1.js"></script>
+
+
+<script>
+
+
+    $('ul li').html(5);
+
+    <!---->
+//    $("ul li").click(function(){
+//        alert(66);
+//    });
+
+
+//    $("ul li").bind("click",function(){
+//        alert(565666)
+//    });
+//
+//    $("ul li").unbind("click");
+//
+
+
+    //事件委托
+    $('ul').on('click','li',function(){
+       alert(666);
+    });
+
+
+
+   $("button").click(function(){
+
+       var $ele=$('<li>');
+       var $len=$("ul li").length;
+       $ele.html(($len+1)*1111);
+       $('ul').append($ele);
+
+   })
+
+
+</script>
+
+
+</body>
+</html>

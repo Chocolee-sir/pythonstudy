@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<p>11111</p>
+<p>122222</p>
+<p>33333</p>
+
+
+
+
+<script src="jquery-3.3.1.js"></script>
+
+
+<script>
+
+    $.extend({
+
+        "myprint":function(){
+            console.log("hello");
+        }
+    });
+
+    $.myprint();
+
+
+    jQuery.extend({
+        min: function(a, b) { return a < b ? a : b; },
+        max: function(a, b) { return a > b ? a : b; }
+    });
+    console.log($.min(3,4));
+
+
+    $.fn.extend({
+        "print":function(){
+            for (var i=0;i<this.length;i++){
+                console.log($(this)[i].innerHTML);
+            }
+        }
+    });
+
+$("p").print();
+
+
+</script>
+
+
+
+</body>
+</html>

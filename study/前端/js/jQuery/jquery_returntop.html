@@ -14,7 +14,9 @@
 
 
         .div1{
+            height: 100px;
             background-color: green;
+            overflow: auto;
         }
 
         .div2{
@@ -46,8 +48,18 @@
 
 
 
-<div class="div1"></div>
-<div class="div2"></div>
+<div class="div1">
+    <h1>111111</h1>
+    <h1>111111</h1>
+    <h1>111111</h1>
+    <h1>111111</h1>
+    <h1>111111</h1>
+    <h1>111111</h1>
+    <h1>111111</h1>
+</div>
+<div class="div2">
+    <button onclick="rtp()">return</button>
+</div>
 
 <div class="returntop hide" onclick="rtp()">返回顶部</div>
 
@@ -72,10 +84,15 @@
     };
 
 
-    function rtp(){
-        $(window).scrollTop(0);
-    }
+//    function rtp(){
+////        $(window).scrollTop(0);
+//        $('.div1').scrollTop(0);
+//    }
 
+
+    $(".div2 button").click(function(){
+        $('.div1').scrollTop(0);
+    })
 
 
 </script>

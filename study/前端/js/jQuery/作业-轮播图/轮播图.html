@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .outer{
+            width: 720px;
+            height: 350px;
+            margin: 80px auto;
+            position: relative;
+        }
+
+
+        .img li{
+            position: absolute;
+            list-style: none;
+            top: 0;
+            left: 0;
+        }
+
+
+        .img img{
+            width: 720px;
+            height: 350px;
+        }
+
+
+        .num{
+            position: absolute;
+            bottom: 10px;
+            left: 270px;
+            list-style: none;
+        }
+
+
+        .num li{
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 12px;
+            margin-left: 10px;
+        }
+
+
+        .btn{
+            top:50%;
+            position: absolute;
+            width: 30px;
+            height: 60px;
+            background-color:lightgray;
+            text-align: center;
+            line-height: 60px;
+            font-size: 20px;
+            margin-top: -30px;
+            opacity: 0.7;
+            color: white;
+
+            display: none;
+        }
+
+
+        .left{
+            left: 0;
+        }
+
+
+        .right{
+            right: 0;
+        }
+
+
+        .outer:hover .btn{
+            display: block;
+        }
+
+
+        .num .active{
+            background-color: red;
+        }
+
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+
+
+<div class="outer">
+
+    <ul class="img">
+
+
+        <li><a href=""><img src="image/5.png" alt=""></a></li>
+        <li><a href=""><img src="image/4.jpg" alt=""></a></li>
+        <li><a href=""><img src="image/3.jpg" alt=""></a></li>
+        <li><a href=""><img src="image/2.jpg" alt=""></a></li>
+        <li><a href=""><img src="image/1.jpg" alt=""></a></li>
+    </ul>
+
+
+    <ul class="num">
+        <!--<li class="active"></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+    </ul>
+
+
+    <div class="left btn"> < </div>
+    <div class="right btn"> > </div>
+
+</div>
+
+
+
+
+
+
+
+
+<script src="../jquery-3.3.1.js"></script>
+
+
+<script>
+    var $img_index=0;
+
+    //通过jquery自动创建按钮标签
+    var $img_num=$(".img li").length;
+    for (var i=0;i<$img_num;i++){
+        $(".num").append("<li>")
+    }
+    $(".num li").eq(0).addClass("active");
+
+
+    //手动轮播
+    $('.num li').mouseover(function () {
+        $img_index=$(this).index();
+        $(this).addClass("active").siblings().removeClass('active');
+        $(".img li").eq($img_index).stop().fadeIn(500).siblings().stop().fadeOut(500);
+    });
+
+
+    //自动轮播
+    var c=setInterval(GO_R,2000);
+    function GO_R(){
+        if($img_index==$img_num-1){
+            $img_index=-1;
+        }
+        $img_index++;
+        $(".num li").eq($img_index).addClass("active").siblings().removeClass('active');
+        $(".img li").eq($img_index).stop().fadeIn(500).siblings().stop().fadeOut(500);
+
+    }
+
+    function GO_L(){
+        if($img_index==0){
+            $img_index=$img_num;
+        }
+        $img_index--;
+        $(".num li").eq($img_index).addClass("active").siblings().removeClass('active');
+        $(".img li").eq($img_index).stop().fadeIn(500).siblings().stop().fadeOut(500);
+    }
+
+
+    //悬浮停止自动轮播
+    $(".outer").hover(function() {
+        clearInterval(c)
+    },function(){
+        c=setInterval(GO_R,2000);
+    });
+
+
+    //button加定播
+    $(".right").click(GO_R);
+    $(".left").click(GO_L);
+
+
+</script>
+
+
+</body>
+</html>
